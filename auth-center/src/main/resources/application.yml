@@ -1,0 +1,25 @@
+server:
+  port: 8881
+
+spring:
+  application:
+    name: auth-center
+
+  #配置数据库
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://119.23.240.32:3306/msbase?prepStmtCacheSize=517&cachePrepStmts=true&autoReconnect=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: root
+    password: ab12345678
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+#注册到注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
